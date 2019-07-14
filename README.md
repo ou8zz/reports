@@ -16,7 +16,7 @@
 ```sh
 gradle 
 gradle build
-gradle 
+gradle bootRun
 ```
 
 ##### 项目部署
