@@ -7,6 +7,11 @@
 * src.resource springboot和jasper配置
 * tmp 导出文件缓存目录
 
+##### Jasper
+```
+工具 https://community.jaspersoft.com/project/jaspersoft-studio
+```
+
 ##### 项目配置打包和启动
 ```sh
 gradle 
