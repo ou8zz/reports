@@ -1,0 +1,7 @@
+tmp
+build
+.gradle
+.idea
+logFile.log
+out
+.DS_Store

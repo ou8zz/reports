@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: product-reports
+  namespace: default
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        app: product-reports
+    spec:
+      containers:
+      - image: swr.cn-east-2.myhuaweicloud.com/yb7/product-reports:1.0.0
+        name: product-reports
+        env:
+        - name: ALILOG_CONFIG
+          value: /etc/config/alilog-cfg.json
+        - name: ALI_LOG_STORE
+          value: product-reports
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /etc/config/
+          name: alilog-cfg
+      imagePullSecrets:
+      - name: default-secret
+      volumes:
+      - configMap:
+          name: alilog-cfg
+        name: alilog-cfg

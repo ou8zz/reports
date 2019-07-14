@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--<bean id="arialuni" class="net.sf.jasperreports.engine.fonts.SimpleFontFamily">
+		<property name="name" value="Arial Unicode MS"/>
+		<property name="normal" value="fonts/ARIALUNI.TTF"/>
+		<property name="pdfEncoding" value="Identity-H"/>
+		<property name="pdfEmbedded" value="true"/>
+	</bean>-->
+	<bean id="msyh" class="net.sf.jasperreports.engine.fonts.SimpleFontFamily">
+		<property name="name" value="微软雅黑"/>
+		<property name="normal" value="fonts/MSYH.TTF"/>
+		<property name="bold" value="fonts/MSYHBD.TTF"/>
+		<property name="pdfEncoding" value="Identity-H"/>
+		<property name="pdfEmbedded" value="true"/>
+	</bean>
+	<!--<bean id="simfang" class="net.sf.jasperreports.engine.fonts.SimpleFontFamily">
+		<property name="name" value="仿宋"/>
+		<property name="normal" value="fonts/SIMFANG.TTF"/>
+		<property name="pdfEncoding" value="Identity-H"/>
+		<property name="pdfEmbedded" value="true"/>
+	</bean>-->
+
+</beans>
