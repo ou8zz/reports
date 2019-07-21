@@ -2,6 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="delivery" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="28ad2b11-a07e-42d4-bb08-c692cfb8b4db">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="date" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -10,7 +11,7 @@
 	<field name="bakNum" class="java.lang.String"/>
 	<field name="difference" class="java.lang.String"/>
 	<title>
-		<band height="33" splitType="Stretch">
+		<band height="48" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
 				<reportElement x="260" y="10" width="70" height="20" uuid="3203a454-9dbf-47ed-bea4-88a96eeacd05">
@@ -21,6 +22,15 @@
 				</textElement>
 				<text><![CDATA[备货单]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="470" y="12" width="80" height="20" uuid="a4ee9c00-e6c8-4788-b1bc-0c0f895d5ad2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="微软雅黑"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<columnHeader>

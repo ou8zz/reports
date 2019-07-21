@@ -8,6 +8,7 @@
 	<parameter name="deliveryTime" class="java.lang.String"/>
 	<parameter name="address" class="java.lang.String"/>
 	<parameter name="qrCode" class="java.lang.String"/>
+	<parameter name="phone" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -17,11 +18,11 @@
 	<title>
 		<band height="169" splitType="Stretch">
 			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
-				<reportElement key="" x="578" y="10" width="150" height="150" uuid="877afd78-2bcd-4ce2-91d7-43920373e3c0"/>
+				<reportElement key="" x="578" y="5" width="150" height="150" uuid="877afd78-2bcd-4ce2-91d7-43920373e3c0"/>
 				<imageExpression><![CDATA[$P{qrCode}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="108" y="38" width="470" height="31" uuid="2262f1b3-ce4f-4dfc-8967-5391262098ab">
+				<reportElement x="108" y="18" width="470" height="20" uuid="2262f1b3-ce4f-4dfc-8967-5391262098ab">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement>
@@ -30,14 +31,14 @@
 				<textFieldExpression><![CDATA[$P{tradeNo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="108" y="58" width="470" height="31" uuid="b0941a0f-ad8b-4e9a-998f-47f55f96570c"/>
+				<reportElement x="108" y="58" width="470" height="20" uuid="b0941a0f-ad8b-4e9a-998f-47f55f96570c"/>
 				<textElement>
 					<font fontName="微软雅黑"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{userName}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="55" y="38" width="60" height="20" uuid="fb749c60-8cd7-4680-9b9c-ed59fbe2a119">
+				<reportElement x="55" y="18" width="60" height="20" uuid="fb749c60-8cd7-4680-9b9c-ed59fbe2a119">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7c54ac11-07dd-4517-a834-917c812b6d15"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -67,7 +68,9 @@
 				<text><![CDATA[导游]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="108" y="78" width="470" height="31" uuid="8e5a54c1-c7aa-4324-9b04-4ba01bc81520"/>
+				<reportElement x="108" y="78" width="470" height="20" uuid="8e5a54c1-c7aa-4324-9b04-4ba01bc81520">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<textElement>
 					<font fontName="微软雅黑"/>
 				</textElement>
@@ -94,7 +97,7 @@
 				<text><![CDATA[提货地点]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="108" y="99" width="470" height="31" uuid="6c6cce5c-c225-438d-8ccb-6bf71d9f954b">
+				<reportElement x="108" y="98" width="470" height="20" uuid="6c6cce5c-c225-438d-8ccb-6bf71d9f954b">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
@@ -103,12 +106,29 @@
 				<textFieldExpression><![CDATA[$P{deliveryTime}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="108" y="118" width="470" height="31" uuid="85ee1593-a7b6-44cb-aac5-4902e0d07272"/>
+				<reportElement x="108" y="118" width="470" height="20" uuid="85ee1593-a7b6-44cb-aac5-4902e0d07272"/>
 				<textElement>
 					<font fontName="微软雅黑"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="108" y="38" width="470" height="20" uuid="59afb261-0807-46a2-ac8f-ff61caa02ddf"/>
+				<textElement>
+					<font fontName="微软雅黑"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{phone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="55" y="38" width="60" height="20" uuid="eab1a11d-5353-44cf-bde8-0aa76e7df233">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7c54ac11-07dd-4517-a834-917c812b6d15"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="微软雅黑" isBold="true"/>
+				</textElement>
+				<text><![CDATA[手机号]]></text>
+			</staticText>
 		</band>
 	</title>
 	<columnHeader>
